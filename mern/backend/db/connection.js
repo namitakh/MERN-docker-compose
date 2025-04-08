@@ -1,6 +1,6 @@
-import { MongoClient, ServerApiVersion } from "mongodb";
+import { MongoClient, ServerApiVersion } from "mongo";
 
-const URI = "mongodb://mongodb:27017";
+const URI = "mongodb://mongo:27017";
 const client = new MongoClient(URI, {
   serverApi: {
     version: ServerApiVersion.v1,
@@ -14,7 +14,7 @@ try {
   await client.connect();
   // Send a ping to confirm a successful connection
   await client.db("admin").command({ ping: 1 });
-  console.log("Pinged your deployment. You successfully connected to MongoDB!");
+  console.log("Pinged your deployment. You successfully connected to Mongo!");
 } catch (err) {
   console.error(err);
 }
