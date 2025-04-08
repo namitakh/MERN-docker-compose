@@ -1,4 +1,4 @@
-import { MongoClient, ServerApiVersion } from "mongo";
+import { MongoClient, ServerApiVersion } from "mongodb";
 
 const URI = "mongodb://mongo:27017";
 const client = new MongoClient(URI, {
